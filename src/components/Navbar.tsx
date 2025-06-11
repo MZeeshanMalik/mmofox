@@ -1,9 +1,9 @@
 // components/Navbar.tsx
 "use client";
-import { useState } from "react";
-import { FaSearch, FaFlagUsa } from "react-icons/fa";
+// import { useState } from "react";
+import { FaFlagUsa } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { MdOutlineShoppingCart } from "react-icons/md";
+// import { MdOutlineShoppingCart } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
 
