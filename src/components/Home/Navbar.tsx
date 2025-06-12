@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full bg-[#101828] text-white">
+    <nav className="w-full bg-[#101828] backdrop-blur-[12.3px] text-white">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="font-bold text-blue-400">

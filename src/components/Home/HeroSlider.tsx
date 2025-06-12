@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const images = ["/home/banner.png", "/home/banner.png", "/home/banner.png"];
@@ -18,13 +19,15 @@ const HeroSlider = () => {
   return (
     <section className="relative w-full h-[20vh] sm:h-[400px] md:h-[200px] overflow-hidden">
       {images.map((img, i) => (
-        <img
+        <Image
           key={i}
           src={img}
           alt={`Slide ${i}`}
           className={`w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-700 ${
             current === i ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
+          height={400}
+          width={800}
         />
       ))}
 
