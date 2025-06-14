@@ -13,6 +13,10 @@
   --textYellow: #ebaa26;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -31,4 +35,175 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.bg-image {
+  /* background-image: radial-gradient(
+      circle at top,
+      rgba(201, 119, 231, 0.671) 30%,
+      transparent 80%
+    ),
+    radial-gradient(
+      circle at bottom,
+      rgba(255, 254, 255, 0.1) 10%,
+      transparent 80%
+    ),
+    url("/gradient.png"); */
+  background-image: radial-gradient(
+      ellipse at top,
+      rgba(169, 85, 247, 0.7) 30%,
+      transparent 90%
+    ),
+    radial-gradient(
+      ellipse at bottom,
+      rgba(255, 255, 255, 0.1) 10%,
+      transparent 90%
+    ),
+    url("/gradient.png");
+  background-blend-mode: multiply; /* or multiply */
+  background-size: 100% 100%; /* ensures it fits the circle */
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.shadow-waves {
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.037),
+    0 0 0 30px rgba(168, 85, 247, 0.15), 0 0 0 30px rgba(168, 85, 247, 0.1),
+    0 0 0 30px rgba(168, 85, 247, 0.05), 0 0 0 30px rgba(168, 85, 247, 0.03);
+  opacity: 0.9;
+}
+/*  */
+@keyframes pulse-wave {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.pulse-ring {
+  animation: pulse-wave 2s infinite ease-out;
+}
+
+.bg-glow {
+  background-color: #0d1025; /* base dark navy */
+  background-image:
+    /* subtle white spotlight at the bottom */ radial-gradient(
+      circle at bottom center,
+      rgba(255, 255, 255, 0.868) 0%,
+      transparent 30%
+    ),
+    /* soft purple halo in the middle */
+      radial-gradient(
+        circle at center,
+        rgba(168, 85, 247, 0.2) 0%,
+        transparent 70%
+      ),
+    /* deeper purple ambient glow all around */
+      radial-gradient(
+        circle at center,
+        rgba(102, 51, 153, 0.3) 0%,
+        transparent 80%
+      );
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #1d2839;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #a855f7;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #9333ea;
+}
+
+.bg-form {
+  background-image: url("/Forms/image1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--bgPrimary);
+  background-blend-mode: overlay;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bg-banner-left {
+  background-image: url("/banner/bgleft.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: #01071600; */
+}
+/* .clip-left {
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+} */
+.bg-banner-right {
+  ::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-image: url("/banner/line.png");
+  }
+  background-image: url("/banner/bgbanner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: #010716d4; */
+  background-color: #04102ea5;
+  background-blend-mode: overlay;
+  left: 65%;
+}
+/* .clip-right {
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+} */
+
+.clip-left {
+  clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+}
+.clip-right {
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* .bg-beam {
+  background-image: url("/banner/line.png");
+  position: absolute;
+  width: 2%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* left: 50%; */
+/* } */
+.bg-beam {
+  z-index: 20;
+  pointer-events: none;
+  background-image: url(/banner/line.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* width: clamp(2px, .7vw, 6px); */
+  height: 203%;
+  position: absolute;
+  top: -52%;
+  left: 28%;
+  transform: translateX(-50%) rotate(13deg);
+  width: 170px;
 }
