@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import LoginForm from "@/components/Forms/LoginForm";
 import LoginModal from "@/components/Forms/LoginForm";
