@@ -121,6 +121,7 @@ const MultiplePaymentMethods = () => {
 };
 
 type PaymentCardProps = {
+  name: string;
   logo: string;
   alt: string;
 };
