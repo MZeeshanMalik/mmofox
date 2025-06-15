@@ -1,7 +1,9 @@
 import GameSelectionSection from "@/components/game/GameSelection";
 import GameBanner from "@/components/Ui/GameBanner";
 import React from "react";
+import { FaChevronRight } from "react-icons/fa";
 // Example game data - you would replace this with your actual data
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const gameData = [
   {
     id: "1",
@@ -81,7 +83,11 @@ const gameData = [
 function page() {
   return (
     <div>
-      <GameBanner title="Games" />
+      <GameBanner title="GAMS" imagePath="/banner/bgcenter.png">
+        <span>Home</span>
+        <FaChevronRight className="text-xs" />
+        <span>Games</span>
+      </GameBanner>
       <GameSelectionSection />
     </div>
   );

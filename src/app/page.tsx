@@ -1,11 +1,9 @@
-import Footer from "@/components/Home/Footer";
 import HeroSlider from "@/components/Home/HeroSlider";
 import HotGameGrid from "@/components/Home/HotGameGrid";
 import HotOffers from "@/components/Home/HotOffers";
 import HotSalePanel from "@/components/Home/HotSalePanel";
 import MultiplePaymentMethods from "@/components/Home/MultiplePayments";
 // import Home from "@/components/Home";
-import Navbar from "@/components/Home/Navbar";
 import Notification from "@/components/Home/Notification";
 import SearchPanel from "@/components/Home/SearchPanel";
 import TestimonialSection from "@/components/Home/TestimonialSection";
